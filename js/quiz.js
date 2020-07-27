@@ -217,10 +217,10 @@ export class ScorePage{
 
             <label>share on</label>
             <div class="social-links">
-                <a href="https://api.whatsapp.com/send?text=Hey,%20Can%20you%20beat%20my%20score%20of%20${playerDetails.score}%20in%20the%20${playerDetails.category}%20category%20on%20quizzer%20.%20Take%20quiz%20here:%20https://twitter.com/iamTMTY" target="_blank">
+                <a href="https://api.whatsapp.com/send?text=Hey,%20Can%20you%20beat%20my%20score%20of%20${playerDetails.score}%20in%20the%20${playerDetails.category}%20category%20on%20quizzer%20.%20Take%20quiz%20here:%20https://quizzer-pro.netlify.app" target="_blank">
                     <img src="./images/whatsapp.svg">
                 </a>
-                <a href="https://twitter.com/share?text=Hey,Can you beat my score of ${playerDetails.score} in the ${playerDetails.category} category on Quizzer.Take quiz here: &url=https://twitter.com/iamTMTY&hashtags=quiz,${playerDetails.category},quizzer" target="_blank">
+                <a href="https://twitter.com/share?text=Hey,Can you beat my score of ${playerDetails.score} in the ${playerDetails.category} category on Quizzer.Take quiz here: &url=https://quizzer-pro.netlify.app&hashtags=quiz,${playerDetails.category},quizzer" target="_blank">
                     <img src="./images/twitter.svg">
                 </a>
             </div>
