@@ -1,0 +1,318 @@
+@import './variables';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: $primary-color;
+    outline: none;
+}
+
+body {
+    // background-color: blue;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(to right, purple, magenta, white, magenta, purple);
+
+    // &::after {
+    //     content: '';
+    //     background-color: magenta;
+    //     opacity: 0.5;
+    //     width: 100vw;
+    // }
+    
+    footer {
+        padding-top: 5px;
+        position: relative;
+        width: 60vw;
+        background-color: white;
+        text-align: center;
+        font-size: 18px;
+
+        span {
+            color: black;
+        }
+        
+        img {
+            width: 16px;
+            height: 16px;
+            margin-left: 5px;
+        }
+    }
+
+    .home {
+        height: 100vh;
+        // overflow-y: scroll;
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        opacity: 0.98;
+        // background-image: url("./images/geometry.jpg");
+        // background: url(./images/geometry-1044090_1920.jpg) center no-repeat;
+
+        
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .welcome_msg {
+                text-align: center;
+                font-size: 25px;
+                
+                span {
+                    font-size: 70px;
+                    font-weight: 100;
+                }
+            }
+
+            .user-name {
+                font-size: 18px;
+            }
+
+            input {
+                padding: 5px;
+                margin-top: 10px;
+                width: 400px;
+                height: 40px;
+                border: none;
+                border-bottom: 2px solid $primary-color;
+                // border: 2px solid bl;
+                outline: none;
+                
+                &:focus {
+                    border-bottom: 2px solid $secondary-color;
+                }
+
+                &::placeholder {
+                    color: $secondary-color;
+                }
+            }
+
+            .name-error {
+                margin-top: 5px;
+                visibility: hidden;
+            }
+        }
+
+        .category_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            width: 50vw;
+            margin-top: 5px;
+
+            label {
+                font-size: 18px;
+            }
+
+            .categories {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                flex-flow: wrap;
+                margin-top: 5px;
+                // background-color: ;
+
+                .category {
+                    width: 8.5em;
+                    height: 4em;
+                    background-color: white;
+                    border: none;
+                    border-left: 1px solid $primary-color;
+                    margin: .5rem .1rem;
+                    cursor: pointer;                    
+                    
+                    &:hover {
+                        background-color: rgb(245, 166, 245);
+                    }
+                }
+            }
+
+            .category-error {
+                visibility: hidden;
+            }
+        }
+
+        .home-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0px;
+
+            button {
+                width: 400px;
+                height: 40px;
+                border-radius: 0px;
+                background-color: $primary-color;
+                color: white;
+                margin: 5px 0;
+                border: none;
+                cursor: pointer;
+                transition: transform 1s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            // .top_quizzers {
+            //     width: 400px;
+            //     height: 40px;
+            //     border-radius: 5px;
+            //     margin-top: 70px;
+            //     background-color: $primary-color;
+            //     color: white;
+            //     border-color: white;
+            // }
+        }
+    }
+}
+
+.show_quiz {
+    animation: show_quiz_page 1s ease 0s 1 forwards;
+}
+
+.remove_quiz {
+    animation: remove_quiz_page 1s ease 0s 1 forwards;
+}
+
+.show_leaderboard {
+    animation: show_leaderboard_page 1s ease 0s 1 forwards;
+}
+
+.remove_leaderboard {
+    animation: remove_leaderboard_page 1s ease 0s 1 forwards;
+}
+
+@keyframes show_quiz_page {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: 0vw;
+    }
+}
+
+@keyframes remove_quiz_page {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100vw;
+    }
+}
+
+@keyframes show_leaderboard_page {
+    0% {
+        left: -100vw;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes remove_leaderboard_page {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100vw;
+    }
+}
+
+@media (max-width: 750px) {
+    .home-container {
+
+        footer {
+            width: 100vw;
+            font-size: 15px;
+
+            img {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        .home {
+            width: 100vw;
+
+            .input {
+
+                .welcome_msg {
+
+                    font-size: 20px;
+
+                    span {
+                        font-size: 50px;
+                    }
+
+                    .user-name {
+                        font-size: 15px;
+                    }
+                }
+
+                input {
+                    width: 250px;
+                }
+            }
+
+            .category_container {
+                width: 90vw;
+
+                label {
+                    font-size: 15px;
+                }
+
+                .categories{
+
+                    .category {
+
+                        width: 6em;
+                        height: 3em;
+                    }
+                }
+            }
+
+            .home-buttons {
+
+                button {
+                    width: 250px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: 550px) {
+    .home-container {
+
+        .home {
+            justify-content: start;
+            overflow-y: scroll;
+            padding: 20px;
+
+        }
+    }
+}

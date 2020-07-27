@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/leaderboard.css">
+    <link rel="stylesheet" href="./css/quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <!-- <meta name="twitter:image" content="/*image-url*/"> -->
+    <title>Quiz App</title>
+</head>
+<body>
+    <div class="home-container">
+        <div class="home">
+            <div class="input">
+                <div class="welcome_msg">
+                    <p>Welcome to <span>Q</span>uizzer,</p> 
+                </div>
+                <!-- <label for="input">Player Name</label> -->
+                <label for="input-field" class="user-name">Please enter a username</label>
+                <input type="text" class="input-field" placeholder="Enter your name">
+                <p class="name-error" style="color: red; font-size: 12px;">Please enter a valid username</p>
+            </div>
+            <div class="category_container">
+                <label for="">Select a category</label>
+                <div class="categories">
+                    <button class="category" value="27" name="animals">Animals</button>
+                    <button class="category" value="31" name="anime">Anime</button>
+                    <button class="category" value="18" name="computer">Computer</button>
+                    <button class="category" value="15" name="games">Games</button>
+                    <button class="category" value="9" name="general">General</button>
+                    <button class="category" value="22" name="geography">Geography</button>
+                    <button class="category" value="23" name="history">History</button>
+                    <button class="category" value="12" name="music">Music</button>
+                    <button class="category" value="20" name="mythology">Mythology</button>
+                    <button class="category" value="17" name="science">Science</button>
+                    <button class="category" value="21" name="sports">Sports</button>
+                    <button class="category" value="28" name="vehicles">Vehicles</button>
+                </div>
+                <p class="category-error" style="color: red; font-size: 12px;">Please select a category</p>
+            </div>
+            <div class="home-buttons">
+                <button class="start">Start</button>
+                <button class="top_quizzers">View leaderboard</button>
+            </div>
+        </div>
+        <footer>
+            <span>Made with <img style="margin: 0;" src="./images/heart.svg" alt="love"> by Temitayo</span>
+            <a href="https://https://www.linkedin.com/in/temitayo-salaudeen-9711a17a/" target="_blank" rel="noopener noreferrer"><img src="./images/linkedin.svg" alt="linkedin"></a>
+            <a href="https://github.com/iamTMTY" target="_blank" rel="noopener noreferrer"><img src="./images/github-sign.svg" alt="github"></a>
+        </footer>
+    </div>
+    <div id="leaderboard">
+        <label for="">Top <span>10</span> Quizzers</label>
+        <table>
+            <tr>
+                <th></th>
+                <th>Player Name</th>
+                <th>Category</th>
+                <th>Time</th>
+                <th>Score</th>
+            </tr>
+            <tr class="position">
+                
+            </tr>
+            <tr class="position">
+                
+            </tr>
+            <tr class="position">
+                
+            </tr>
+            <tr class="position">
+                
+            </tr>
+            <tr class="position">
+                
+            </tr>
+            <tr class="position">
+                
+            </tr>
+            <tr class="position">
+                
+            </tr>
+            <tr class="position">
+                
+            </tr>
+            <tr class="position">
+                
+            </tr>
+            <tr class="position">
+                
+            </tr>
+        </table>
+        <p class="loading-text" style="font-size: 20px; margin-top: 20vh; letter-spacing: 5px; line-height: 1px;">Retrieving Data</p>
+        <img class="loading-image" src="./images/712.gif" alt="" width="32px" height="32px" style="margin-bottom: 20vh; margin-top: 20px;">
+        <button class="home_btn">Home</button>
+    </div>
+    <div id="quiz">
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+
+    <script >
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCW4bi_m1aDkdzr2yqkMCHgVkSSF84jba4",
+            authDomain: "quiz-app-tmty.firebaseapp.com",
+            databaseURL: "https://quiz-app-tmty.firebaseio.com",
+            projectId: "quiz-app-tmty",
+            storageBucket: "quiz-app-tmty.appspot.com",
+            messagingSenderId: "495006867216",
+            appId: "1:495006867216:web:91bd6c4ab8821c0707cf95",
+            measurementId: "G-YT4K8E2324"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
