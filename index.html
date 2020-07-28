@@ -4,11 +4,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="./css/home.css">
-    <link rel="stylesheet" href="./css/leaderboard.css">
-    <link rel="stylesheet" href="./css/quiz.css">
+    <link rel="stylesheet" href="./styles/css/home.css">
+    <link rel="stylesheet" href="./styles/css/leaderboard.css">
+    <link rel="stylesheet" href="./styles/css/quiz.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
-    <!-- <meta name="twitter:image" content="/*image-url*/"> -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script defer src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+    <script defer src="js/firebaseConfig.js"></script>
+    <script type="module" src="./js/main.js"></script>
     <title>Quizzer</title>
 </head>
 <body>
@@ -99,29 +105,5 @@
     </div>
     <div id="quiz">
     </div>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
-
-    <script >
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyCW4bi_m1aDkdzr2yqkMCHgVkSSF84jba4",
-            authDomain: "quiz-app-tmty.firebaseapp.com",
-            databaseURL: "https://quiz-app-tmty.firebaseio.com",
-            projectId: "quiz-app-tmty",
-            storageBucket: "quiz-app-tmty.appspot.com",
-            messagingSenderId: "495006867216",
-            appId: "1:495006867216:web:91bd6c4ab8821c0707cf95",
-            measurementId: "G-YT4K8E2324"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
-    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
